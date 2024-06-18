@@ -1,23 +1,27 @@
-import { DailyForecastData } from "@/entities/WeatherData";
+import { Card, CardContent } from "@/components/ui/card";
+import { HourlyForecastData } from "@/entities/WeatherData";
 import { formatTemprature } from "@/utils/formatting";
 import { getConditionIcons } from "@/utils/functions";
 import { format } from "date-fns";
 import Image from "next/image";
-interface DailyForecastProps {
-  DailyForecast: DailyForecastData[];
+
+interface HourlyForecastProps {
+  HourlyForecast: HourlyForecastData[];
 }
 
-export default function DailyForecast({ DailyForecast }: DailyForecastProps) {
+export default function HourlyForecast({
+  HourlyForecast,
+}: HourlyForecastProps) {
   return (
-    <div className="flex flex-col items-start justify-center">
-      {DailyForecast.map((forecast) => {
-        return (
-          <div className="flex flex-col align-center">
+    <Card>
+      <CardContent className="flex items-start justify-center">
+        {HourlyForecast.map((forecast) => {
+          return (
             <div
               key={format(forecast.date, "yyyy-MM-dd")}
-              className="flex flex-row items-center px-2"
+              className="flex flex-col items-center px-2"
             >
-              <div className="">
+              <div>
                 <Image
                   src={getConditionIcons(forecast.condition)}
                   alt={forecast.condition}
@@ -30,9 +34,9 @@ export default function DailyForecast({ DailyForecast }: DailyForecastProps) {
                 {formatTemprature(forecast.minTemperature)}
               </div>
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </CardContent>
+    </Card>
   );
 }
