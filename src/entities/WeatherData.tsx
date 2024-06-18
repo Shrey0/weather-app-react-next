@@ -34,28 +34,28 @@ const devHourlyForecastData : HourlyForecastData[] = [
 {
   condition: 'Cloudy',
   date: addDays(today, 1),
-  maxTemperature: 40,
-  minTemperature: 26
+  maxTemperature: 30,
+  minTemperature: 21
 
 },
 {
   condition: 'Rainy',
   date: addDays(today, 2),
-  maxTemperature: 45,
-  minTemperature: 24
+  maxTemperature: 27,
+  minTemperature: 18
 
 },
 {
   condition: 'Sunny',
   date: addDays(today, 3),
-  maxTemperature: 50,
-  minTemperature: 21
+  maxTemperature: 24,
+  minTemperature: 16
 
 },
 {
   condition: 'Thunderstorms',
   date: addDays(today, 4),
-  maxTemperature: 24,
+  maxTemperature: 31,
   minTemperature: 16
 
 },
@@ -65,29 +65,29 @@ const devDailyForecastData: DailyForecastData[] = [
   {
     condition: 'Cloudy',
     date: addDays(today, 1),
-    maxTemperature: 40,
-    minTemperature: 26
+    maxTemperature: 30,
+    minTemperature: 21
   
   },
   {
     condition: 'Rainy',
     date: addDays(today, 2),
-    maxTemperature: 45,
-    minTemperature: 24
+    maxTemperature: 27,
+    minTemperature: 18
   
   },
   {
     condition: 'Sunny',
     date: addDays(today, 3),
-    maxTemperature: 50,
-    minTemperature: 21
+    maxTemperature: 24,
+    minTemperature: 16
   
   },
   {
     condition: 'Thunderstorms',
     date: addDays(today, 4),
-    maxTemperature: 24,
-    minTemperature: 16
+    maxTemperature: 31,
+    minTemperature: 19
   
   },
 ]
